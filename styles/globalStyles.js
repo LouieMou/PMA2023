@@ -6,7 +6,7 @@ const colors = {
   secondary_green: "#28A69A",
   white: "#FFFFFF",
   light_grey: "#A0A0A0",
-  dark_grey: "#606060"
+  dark_grey: "#606060",
 };
 const fontStyles = {
   headerSize: 30,
@@ -19,20 +19,39 @@ const globalStyles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  curved_container: {
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-    backgroundColor: colors.primary_purple,
+  curved_container_top: {
     width: Dimensions.get("window").width,
-    height: Dimensions.get("window").height * 0.4,
+    height: Dimensions.get("window").height * 0.3,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  circle: {
+  curved_container_bottom: {
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
+    backgroundColor: colors.white,
+    width: Dimensions.get("window").width,
+    height: Dimensions.get("window").height * 0.7,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  circle_profile: {
     width: Dimensions.get("window").width * 0.6,
     height: Dimensions.get("window").height * 0.3,
-    borderRadius: Dimensions.get("window").width * 0.8 / 2,
+    borderRadius: (Dimensions.get("window").width * 0.8) / 2,
     backgroundColor: colors.primary_purple,
-    alignItems: "center", 
-    justifyContent: "center"
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  circle_login: {
+    backgroundColor: "#6638f0",
+    width: Dimensions.get("window").width * 0.3,
+    height: Dimensions.get("window").height * 0.15,
+    borderRadius: (Dimensions.get("window").width * 0.6) / 2,
+    top:Dimensions.get("window").height * 0.22, 
+    backgroundColor: colors.secondary_green,
+    position: "absolute",
+    zIndex: 1,
   },
   header_container: {
     alignItems: "center",
@@ -47,13 +66,18 @@ const globalStyles = StyleSheet.create({
     fontSize: 22,
     color: "white",
   },
-  image_profile: {
+  header_container_row: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  image_resized: {
     width: "80%",
     height: "80%",
   },
   image_small: {
-    width: Dimensions.get("window").width * 0.8,
-    height: Dimensions.get("window").height * 0.3,
+    width: Dimensions.get("window").width * 0.4,
+    height: Dimensions.get("window").height * 0.2,
     marginBottom: 20,
   },
   image_large: {

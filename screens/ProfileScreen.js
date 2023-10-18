@@ -7,8 +7,8 @@ export default function ProfileScreen({navigation}){
 
     return(
         <View style={[globalStyles.background_container, {backgroundColor: colors.white}]}>
-          <View style={globalStyles.circle}>
-            <Image style={globalStyles.image_profile}  resizeMode="contain" source={require("../assets/user.png")}/>
+          <View style={globalStyles.circle_profile}>
+            <Image style={globalStyles.image_resized}  resizeMode="contain" source={require("../assets/user.png")}/>
           </View>
           <View style={globalStyles.header_container}>
             <Text style={[globalStyles.header, {color: colors.dark_grey}]}>Alien Explorer</Text>
