@@ -1,9 +1,10 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions, useWindowDimensions } from "react-native";
 
 const colors = {
-    primary: "", 
-    secondary: "", 
-    white: ""
+    primary_purple: "#D291FF", 
+    secondary_orange: "#Ee9f27", 
+    white: "#FFFFFF",
+    grey: "#A0A0A0"
 }
 
 const fontStyles = {
@@ -40,13 +41,13 @@ const globalStyles = StyleSheet.create({
     height: 200,
   },
   image_large: {
-    width: 300,
-    height: 300,
+    width: Dimensions.get('window').height * 0.4,
+    height: Dimensions.get('window').width * 0.8,
     marginBottom: 20,
   },
   nav_button_primary: {
     backgroundColor: "#D291FF",
-    width: 250,
+    width: Dimensions.get('window').width * 0.7, 
     padding: 10,
     borderRadius: 20,
     alignItems: "center",
@@ -55,27 +56,29 @@ const globalStyles = StyleSheet.create({
   }, 
   nav_button_secondary: {
     backgroundColor: "#Ee9f27",
-    width: 250,
+    width: Dimensions.get('window').width * 0.7,
     padding: 10,
     borderRadius: 20,
     alignItems: "center",
-    color: "white",
+    color: colors.white,
     marginTop: 10,
   }, 
   input_header: {
-    color: "grey",
+    color: colors.grey,
     fontSize: 12,
+    marginTop: 10,
+    marginBottom: 5,
+    marginLeft: 10,
   },
   input: {
     borderColor: "#D291FF",
     borderWidth: 2,
-    width: 250,
+    width: Dimensions.get('window').width * 0.7,
     padding: 10,
     borderRadius: 20,
     alignItems: "center",
-    color: "black",
-    textAlign: "center",
-    marginTop: 10,
+    color: colors.grey,
+    textAlign: "left",
   },
 });
 
