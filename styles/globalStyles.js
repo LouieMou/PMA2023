@@ -52,6 +52,10 @@ const globalStyles = StyleSheet.create({
     backgroundColor: colors.secondary_green,
     position: "absolute",
     zIndex: 1,
+    flexDirection: "column",
+    alignItems: "center", 
+    justifyContent: "center",
+    alignContent: "center"
   },
   header_container: {
     alignItems: "center",
